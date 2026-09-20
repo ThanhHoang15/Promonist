@@ -1,0 +1,25 @@
+.section-heading {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+}
+.section-heading--intro { width: min(100%, 842px); padding-left: 25px; margin-top: 3px; }
+.section-heading h1 { margin: 0; flex-shrink: 0; font-weight: 400; font-size: clamp(29px, 3vw, 45px); letter-spacing: -0.025em; white-space: nowrap; }
+.section-heading__boxed { display: inline-block; padding: 6px 8px 10px 30px; margin-right: -5px; border: 1.5px solid #191919; border-radius: 14px; }
+.section-heading__rule { flex: 1; align-self: center; min-width: 30px; height: 3px; margin-left: 14px; background: #8b4dff; }
+.intro__illustration { display: block; width: min(100%, 1120px); height: auto; margin: 29px auto 0; }
+.intro__description { margin: 29px auto 0; font-size: clamp(15px, 1.55vw, 21px); line-height: 1.5; }
+.intro__underline { width: 66%; height: 3px; margin: 43px 0 0; background: #8b4dff; }
+
+.intro__description { text-align: center; font-weight: 400; letter-spacing: .007em; }
+
+@media (max-width: 760px) {
+  .section-heading--intro { width: 100%; padding-left: 0; margin-top: 18px; }
+  .section-heading h1 { font-size: clamp(25px, 6vw, 38px); }
+  .section-heading__boxed { border-radius: 11px; padding: 6px 7px 8px 13px; }
+  .section-heading__rule { margin-left: 10px; }
+  .intro__illustration { width: 100%; margin-top: 26px; }
+  .intro__description { max-width: 600px; margin-top: 19px; font-size: 16px; }
+  .desktop-break { display: none; }
+  .intro__underline { width: 69%; margin-top: 30px; }
+}

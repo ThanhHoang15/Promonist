@@ -1,16 +1,41 @@
-# React + Vite
+# Promonist — modular React + TypeScript + SCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is the supplied **one-page Promonist design**, reorganized to match your dashboard's `src/components/`, `src/pages/` and `src/styles/` approach. Everything is a `.tsx` TypeScript component and each visible section has its own `.scss` file. Sass compiles these files to regular CSS automatically in Vite.
 
-Currently, two official plugins are available:
+## Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requires Node.js 20.19+ or 22.12+. In the extracted folder:
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+For a production build: `npm run build`. For a TypeScript check: `npm run typecheck`.
 
-## Expanding the Oxlint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+promonist-component-structure/
+├── public/images/                       supplied logo + hero + before/after photos
+├── src/
+│   ├── App.tsx                           only renders <Home />
+│   ├── main.tsx                          mounts the app and imports global styles
+│   ├── components/
+│   │   ├── navbar/Navbar.tsx             navbar.scss
+│   │   ├── hero/Hero.tsx                 hero.scss
+│   │   ├── showcase/Showcase.tsx         showcase.scss
+│   │   ├── beforeAfter/BeforeAfter.tsx   beforeAfter.scss
+│   │   └── infoDialog/InfoDialog.tsx     infoDialog.scss, dialogContent.ts
+│   ├── pages/home/Home.tsx               home.scss
+│   ├── data/comparisons.ts               photo paths and captions
+│   └── styles/global.scss               shared/reset/focus styling
+├── index.html
+├── package.json
+├── tsconfig*.json
+└── vite.config.ts
+```
+
+`App.tsx` contains no layout, navigation, or business logic. `Home.tsx` composes the navbar and sections and owns the open-dialog state. Each component handles its own presentation and styles. This project includes *all image assets* copied from the original delivered project.
+
+**Scope:** The supplied design only depicts a landing page. Pricing, Reviews, Log in, and Sign up remain **informational dialogs**, not live account flows. This ZIP does **not** claim to contain a backend, database, AI image generator, or social-platform publishing integrations.
