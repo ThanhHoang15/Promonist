@@ -22,31 +22,31 @@ export default function BeforeAfter({ before, after, name, priority = false }: B
   return (
     <div className="comparison" style={{ '--split': `${value}%` } as SplitStyle}>
       <img
-        className="comparison__image comparison__image--before"
+        className="comparison-image image-before"
         src={before}
         alt={`${name} photographed on a phone, before enhancement`}
         loading={priority ? 'eager' : 'lazy'}
         draggable="false"
       />
       <img
-        className="comparison__image comparison__image--after"
+        className="comparison-image image-after"
         src={after}
         alt={`${name} after promotional photo enhancement`}
         loading={priority ? 'eager' : 'lazy'}
         draggable="false"
       />
-      <div className="comparison__divider" aria-hidden="true" />
-      <div className="comparison__handle" aria-hidden="true">
+      <div className="comparison-divider" aria-hidden="true" />
+      <div className="comparison-handle" aria-hidden="true">
         <svg viewBox="0 0 40 40" width="29" height="29" fill="none">
           <path d="m15 13-7 7 7 7M25 13l7 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
-      <span className="comparison__label comparison__label--before" aria-hidden="true">Before</span>
-      <span className="comparison__label comparison__label--after" aria-hidden="true">After</span>
+      <span className="comparison-label label-before" aria-hidden="true">Before</span>
+      <span className="comparison-label label-after" aria-hidden="true">After</span>
       <label className="sr-only" htmlFor={sliderId}>{name}: move the slider to compare the before and after photos</label>
       <input
         id={sliderId}
-        className="comparison__range"
+        className="comparison-slider"
         type="range"
         min="0"
         max="100"

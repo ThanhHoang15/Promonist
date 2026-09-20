@@ -1,10 +1,10 @@
 .comparison { position: relative; aspect-ratio: 4 / 3; overflow: hidden; isolation: isolate; background: #eaeaea; touch-action: pan-y; }
-.comparison__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; pointer-events: none; }
-.comparison__image--after { clip-path: inset(0 0 0 var(--split)); }
-.comparison__divider { position: absolute; z-index: 2; top: 0; bottom: 0; left: var(--split); width: 2px; transform: translateX(-50%); background: white; box-shadow: 0 0 2px #3338; pointer-events: none; }
-.comparison__handle { position: absolute; z-index: 3; left: var(--split); top: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 41px; height: 41px; color: #141414; border-radius: 50%; background: white; box-shadow: 0 1px 7px #0002; pointer-events: none; }
-.comparison__label { position: absolute; z-index: 3; bottom: 12px; padding: 7px 12px; color: white; background: #191919d9; border-radius: 7px; font: 13px/1 "Century Gothic", Arial, sans-serif; pointer-events: none; }
-.comparison__label--before { left: 12px; }
-.comparison__label--after { right: 12px; }
-.comparison__range { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.comparison-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; pointer-events: none; }
+.image-after { clip-path: inset(0 0 0 var(--split)); }
+.comparison-divider { position: absolute; z-index: 2; top: 0; bottom: 0; left: var(--split); width: 2px; transform: translateX(-50%); background: white; box-shadow: 0 0 2px #3338; pointer-events: none; }
+.comparison-handle { position: absolute; z-index: 3; left: var(--split); top: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 41px; height: 41px; color: #141414; border-radius: 50%; background: white; box-shadow: 0 1px 7px #0002; pointer-events: none; }
+.comparison-label { position: absolute; z-index: 3; bottom: 12px; padding: 7px 12px; color: white; background: #191919d9; border-radius: 7px; font: 13px/1 "Century Gothic", Arial, sans-serif; pointer-events: none; }
+.label-before { left: 12px; }
+.label-after { right: 12px; }
+.comparison-slider { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
 .comparison:focus-within { outline: 3px solid #8255ed; outline-offset: 4px; }

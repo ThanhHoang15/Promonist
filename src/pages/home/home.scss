@@ -1,5 +1,5 @@
-.intro, .showcase { width: min(100% - 74px, 1300px); margin-inline: auto; }
+.hero, .showcase { width: min(100% - 74px, 1300px); margin-inline: auto; }
 
 @media (max-width: 760px) {
-  .intro, .showcase { width: calc(100% - 34px); }
+  .hero, .showcase { width: calc(100% - 34px); }
 }

@@ -41,11 +41,11 @@ export default function InfoDialog({ dialog, onClose }: InfoDialogProps) {
       if (event.target === event.currentTarget) onClose();
     }}>
       <section className="info-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-heading" aria-describedby="dialog-description">
-        <button ref={closeButtonRef} className="info-dialog__close" type="button" aria-label="Close dialog" onClick={onClose}>×</button>
+        <button ref={closeButtonRef} className="close-button" type="button" aria-label="Close dialog" onClick={onClose}>×</button>
         <img src="/images/promonist-logo.png" alt="" width="148" height="45" />
         <h2 id="dialog-heading">{dialogCopy[dialog].title}</h2>
         <p id="dialog-description">{dialogCopy[dialog].description}</p>
-        <button className="info-dialog__done" type="button" onClick={onClose}>Got it</button>
+        <button className="done-button" type="button" onClick={onClose}>Got it</button>
       </section>
     </div>
   );
